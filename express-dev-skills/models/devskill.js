@@ -42,7 +42,14 @@ const getOne = (id) => {
   return devskill
 }
 
+const create = (devskill) => {
+  devskill.id = Date.now() % 1000000
+  devskill.description = 'description'
+  devskills.push(devskill)
+}
+
 module.exports = {
   getAll,
-  getOne
+  getOne,
+  create
 }

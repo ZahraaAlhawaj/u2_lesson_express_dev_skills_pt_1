@@ -3,9 +3,14 @@ var router = express.Router()
 
 const devskillsCtrl = require('../controllers/devskills')
 
-/* GET /todos */
+/* GET / devskills */
 router.get('/', devskillsCtrl.index)
-//GET /todos/:id
+//Get /  devskills/new
+router.get('/new', devskillsCtrl.newSkill)
+//GET / devskills/:id
 router.get('/:id', devskillsCtrl.show)
+
+//POST /
+router.post('/', devskillsCtrl.create)
 
 module.exports = router

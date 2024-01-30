@@ -11,7 +11,18 @@ const show = (req, res) => {
   res.render('devskills/show', { devskills })
 }
 
+const newSkill = (req, res) => {
+  res.render('devskills/new')
+}
+
+const create = (req, res) => {
+  Devskill.create(req.body) //req.body.(name from form)
+  res.redirect('/devskills')
+}
+
 module.exports = {
   index,
-  show
+  show,
+  newSkill,
+  create
 }
