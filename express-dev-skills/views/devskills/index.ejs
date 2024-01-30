@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1>Developer Skills</h1>
+        <ul>
+          <% devskills.forEach( devskill => { %>
+          <li>
+            <a href="/devskills/<%= devskill.id %>"><%= devskill.skillName %></a>
+          </li>
+        <% }); %>
+        </ul>
+    </body>
+  <html>
