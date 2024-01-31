@@ -48,8 +48,25 @@ const create = (devskill) => {
   devskills.push(devskill)
 }
 
+const deleteOne = (id) => {
+  const index = devskills.findIndex((devskill) => {
+    return devskill.id === parseInt(id)
+  })
+  devskills.splice(index, 1)
+}
+
+const updateOne = (id, updatedSkill) => {
+  const devSkillUpdate = devskills.find((devskill) => {
+    return devskill.id === parseInt(id)
+  })
+  console.log(devSkillUpdate)
+  devSkillUpdate.skillName = updatedSkill
+}
+
 module.exports = {
   getAll,
   getOne,
-  create
+  create,
+  deleteOne,
+  updateOne
 }

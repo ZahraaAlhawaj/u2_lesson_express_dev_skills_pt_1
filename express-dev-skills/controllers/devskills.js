@@ -20,9 +20,30 @@ const create = (req, res) => {
   res.redirect('/devskills')
 }
 
+const deleteSkill = (req, res) => {
+  Devskill.deleteOne(req.params.id)
+  res.redirect('/devskills')
+}
+
+const edit = (req, res) => {
+  const devskill = Devskill.getOne(req.params.id)
+  res.render('devskills/edit', { devskill })
+}
+
+const updateSkill = (req, res) => {
+  let devskillId = req.params.id
+  let updatedSkill = req.body.skillName
+  console.log(updatedSkill)
+  Devskill.updateOne(devskillId, updatedSkill)
+  res.redirect('/devskills/' + devskillId)
+}
+
 module.exports = {
   index,
   show,
   newSkill,
-  create
+  create,
+  deleteSkill,
+  edit,
+  updateSkill
 }

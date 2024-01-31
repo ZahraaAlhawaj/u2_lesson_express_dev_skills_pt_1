@@ -11,6 +11,12 @@
   <div>
     <h2><%= devskills.skillName %></h2>
     <h3>Description: <%= devskills.description %></h3>
+    <form action="/devskills/ ?_method=DELETE" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+
+    <a href="/devskills/<%= devskills.id %>/edit">Edit</a>
+
   </div>
 </body>
 </html>

@@ -25,3 +25,32 @@ div {
   text-align: center;
   padding: 12px 10px;
 }
+
+#skill {
+  display: inline;
+}
+
+#add {
+  display: inline;
+  margin-left: 1%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#create {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+}

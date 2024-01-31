@@ -7,9 +7,10 @@
   <title>Document</title>
 </head>
 <body>
-  <form action="/devSkills" method="POST">
-    <input type="text" name="skillName" placeholder="Add Skill">
-    <button id="create" type="submit">Create</button>
+
+  <form action="/devskills/<%= devskill.id %>?_method=PUT" method="POST">
+    <input type="text" name="skillName" value="<%= devskill.skillName %>">
+    <button id="create" type="submit">Update</button>
   </form>
   
 </body>
